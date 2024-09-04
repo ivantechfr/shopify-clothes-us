@@ -21,8 +21,11 @@ jobs:
     - name: Install Shopify Theme Kit
       run: npm install -g @shopify/themekit
 
+    - name: Add npm global bin to PATH
+      run: echo "::add-path::$(npm bin -g)"
+
     - name: Verify Theme Kit Installation
-      run: ./node_modules/.bin/theme --version
+      run: theme --version
 
     - name: Deploy to Shopify
       env:
