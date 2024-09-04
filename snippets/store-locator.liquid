@@ -1,0 +1,10 @@
+<div class="store-locator">
+  {% for block in section.blocks %}
+  <div class="store-item">
+    <img src ="{{ block.settings.store_image | img_url:'medium' }}">
+    <h2>{{ block.settings.store_title }}</h2>
+    <p>{{ block.settings.store_address }}</p>
+    <a href="{{ block.settings.store_website }}" target="_blank">Visit Website</a>
+  </div>
+    {% endfor %}
+</div>

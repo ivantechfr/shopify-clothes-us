@@ -1,0 +1,23 @@
+.custom-banner{
+  width:100%;
+  min-height:50vh;
+  overflow:hidden;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-image:url('{{section.settings.banner_image | img_url:'master'}}');
+  /* padding:50px; */
+}
+
+ /* .custom-banner  .banner-image img{
+  max-width:800px;
+  height:auto;
+  object-fit:cover;
+  
+} */
+.custom-banner .banner-content{
+  text-align:center;
+}

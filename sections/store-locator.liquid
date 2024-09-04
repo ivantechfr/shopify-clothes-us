@@ -1,0 +1,44 @@
+{% render 'store-locator' %}
+
+
+{% schema %}
+  {
+    "name": " Unique Store Locator",
+     "settings":[],
+    "blocks": [
+      {
+        "type":"store",
+         "name":"Store",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "store_image",
+               "label": "Store Image"
+            },
+            {
+              "type": "text",
+               "id": "store_title",
+               "label": "Store Title"
+            },
+               {
+              "type": "text",
+               "id": "store_address",
+               "label": "Store Address"
+            },
+               {
+              "type": "url",
+               "id": "store_website",
+               "label": "Store Website"
+            }
+          ]
+      }
+       
+        ],
+       "presets":[
+          {
+            "name":"Unique Store Locator",
+              "category":"Custom"
+          }     
+    ]
+  }
+{% endschema %}

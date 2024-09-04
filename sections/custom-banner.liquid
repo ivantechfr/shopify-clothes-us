@@ -1,0 +1,45 @@
+{{ 'custom-banner.css' | asset_url | stylesheet_tag }}
+
+
+<section class="custom-banner">
+  <div class="banner-image">
+        <img src ="{{ section.settings.banner_img | img_url:'medium' }}">
+  </div>
+  <div class="banner-content">
+    <!-- <img src ="{{ section.settings.heading | img_url:'medium' }}"> -->
+    <h2>{{ section.settings.banner_heading }}</h2>
+    <p>{{ section.settings.banner_subheading }}</p>
+    <!-- <a href="{{ block.settings.store_website }}" target="_blank">Visit Website</a> -->
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Custom-banner",
+    "settings": [
+      {
+           "type":"image_picker",
+            "id":"banner_img",
+             "label":"Banner Image"
+      },
+         {
+           "type":"text",
+            "id":"banner_heading",
+             "label":"Banner Heading"
+      },
+          
+      {
+           "type":"text",
+            "id":"banner_subheading",
+             "label":"Banner Subheading"
+      },
+   
+    ],
+        "presets":[
+          {
+            "name":"Custom-banner",
+              "category":"Custom"
+          }     
+    ]
+  }
+{% endschema %}
