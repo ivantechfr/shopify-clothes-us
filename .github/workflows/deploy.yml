@@ -21,6 +21,9 @@ jobs:
     - name: Install Shopify Theme Kit
       run: npm install -g @shopify/themekit
 
+    - name: Verify Theme Kit Installation
+      run: theme --version
+
     - name: Deploy to Shopify
       env:
         SHOPIFY_PASSWORD: ${{ secrets.SHOPIFY_THEME_ACCESS_PASSWORD }}
